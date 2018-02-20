@@ -1,0 +1,65 @@
+{
+  "root": true,
+  "extends": ["airbnb-base", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "plugins": ["import", "prettier", "flowtype"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module"
+  },
+  "rules": {
+    "arrow-body-style": "off",
+    "arrow-parens": "off",
+    "indent": "off",
+    "no-mixed-operators": "off",
+    "max-len": [
+      "error",
+      100,
+      2,
+      {
+        "ignoreUrls": true
+      }
+    ],
+    "no-console": "error",
+    "no-alert": "error",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "object-curly-spacing": ["error", "always"],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+      }
+    ],
+    "space-before-function-paren": "off",
+    "import/extensions": "off",
+    "import/first": "off",
+    "import/unambiguous": "off",
+    "import/namespace": ["error", { "allowComputed": true }],
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "flowtype/define-flow-type": "error",
+    "flowtype/require-valid-file-annotation": "off",
+    "flowtype/require-parameter-type": "off",
+    "flowtype/require-return-type": "off",
+    "flowtype/space-after-type-colon": "off",
+    "flowtype/space-before-type-colon": "off",
+    "flowtype/type-id-match": "off",
+    "flowtype/use-flow-type": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "printWidth": 100,
+        "trailingComma": "all"
+      }
+    ]
+  }
+}

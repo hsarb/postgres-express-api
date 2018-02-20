@@ -1,0 +1,54 @@
+{
+  "name": "postgres-express-boilerplate",
+  "repository": "https://github.com/hsarb/postgres-express-boilerplate",
+  "scripts": {
+    "clean": "rimraf dist",
+    "flow": "flow --show-all-errors",
+    "format": "prettier --write '**/*.js'",
+    "lint": "eslint './src/**/*.js' --quiet",
+    "precommit": "flow check && lint-staged",
+    "start": "nodemon --exec babel-node --harmony bin/start.js"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix",
+      "prettier --write '**/*.js'",
+      "git add"
+    ]
+  },
+  "author": "Brandon Clark",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/node": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "@babel/preset-stage-0": "^7.0.0-beta.40",
+    "babel-eslint": "^8.2.2",
+    "chalk": "^2.3.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "flow-bin": "^0.63.1",
+    "lint-staged": "^6.0.0",
+    "nodemon": "^1.15.1",
+    "prettier": "^1.10.2"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.1",
+    "morgan": "^1.9.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "pg-promise": "^7.5.4",
+    "socket.io": "^2.0.4"
+  },
+  "version": "1.0.0",
+  "main": "index.js"
+}
